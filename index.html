@@ -13,8 +13,24 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <!-- Experiment: Playfair Display (títulos) + Inter (cuerpo) -->
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+        <style>
+            .masthead-heading { font-family: 'Playfair Display', serif; font-weight: 700; }
+            .masthead-subheading { font-family: 'Inter', sans-serif; font-weight: 400; }
+        </style>
+        <!-- Core theme CSS (includes Bootstrap) - cargados con versión para cache-busting -->
+        <script>
+            // Cambia SOLO el valor de ASSET_VERSION para forzar recarga de assets en producción
+            var ASSET_VERSION = '1';
+            (function(){
+                var l = document.createElement('link');
+                l.rel = 'stylesheet';
+                l.href = 'css/styles.css?v=' + ASSET_VERSION;
+                document.head.appendChild(l);
+            })();
+        </script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -53,28 +69,19 @@
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Comercio electrónico</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <img class="service-icon mx-auto d-block" src="assets/img/services/sociedad.jpg" alt="Asesoramiento societario" />
+                        <h4 class="my-3">Asesoramiento societario</h4>
+                        <p class="text-muted">Constitución de sociedades, reestructuraciones, gobierno corporativo y cumplimiento societario.</p>
                     </div>
                     <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Diseño responsivo</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <img class="service-icon mx-auto d-block" src="assets/img/services/contratos.jpg" alt="Contratos comerciales" />
+                        <h4 class="my-3">Contratos comerciales</h4>
+                        <p class="text-muted">Redacción, negociación y revisión de contratos civiles y comerciales, con cláusulas de protección adaptadas a tu negocio.</p>
                     </div>
                     <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Seguridad web</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <img class="service-icon mx-auto d-block" src="assets/img/services/litigios.jpg" alt="Litigios y resolución de conflictos" />
+                        <h4 class="my-3">Litigios y resolución de conflictos</h4>
+                        <p class="text-muted">Representación en juicios, mediación y arbitraje para proteger tus derechos e intereses.</p>
                     </div>
                 </div>
             </div>
@@ -184,62 +191,10 @@
         <section class="page-section" id="about">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Acerca de</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">Sobre Nosotros</h2>
+                    <h3 class="section-subheading text-muted fs-3">Estudio joven y dinámico adaptado a las ultimas estructuras de negocios, somos un aliado estrategico para aquellos que desean proteger su inversión y patrimonio en la provincia de Catamarca.</h3>
                 </div>
-                <ul class="timeline">
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>2009-2011</h4>
-                                <h4 class="subheading">Nuestros humildes comienzos</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Marzo 2011</h4>
-                                <h4 class="subheading">Nace una agencia</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Diciembre 2015</h4>
-                                <h4 class="subheading">Transición a servicio completo</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Julio 2020</h4>
-                                <h4 class="subheading">Expansión fase dos</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <h4>
-                                Sé parte
-                                <br />
-                                de nuestra
-                                <br />
-                                historia!
-                            </h4>
-                        </div>
-                    </li>
-                </ul>
+                
             </div>
         </section>
         <!-- Team-->
@@ -249,35 +204,19 @@
                     <h2 class="section-heading text-uppercase">Nuestro increíble equipo</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
-                <div class="row">
-                    <div class="col-lg-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />
-                            <h4>Parveen Anand</h4>
-                            <p class="text-muted">Diseñador principal</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Perfil de Twitter de Parveen Anand"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Perfil de Facebook de Parveen Anand"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Perfil de LinkedIn de Parveen Anand"><i class="fab fa-linkedin-in"></i></a>
+                            <h4>Hugo Nicolas Trentini</h4>
+                            <p class="text-muted">Abogado</p>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
-                            <h4>Diana Petersen</h4>
-                            <p class="text-muted">Responsable de marketing</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Perfil de Twitter de Diana Petersen"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Perfil de Facebook de Diana Petersen"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Perfil de LinkedIn de Diana Petersen"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
-                            <h4>Larry Parker</h4>
-                            <p class="text-muted">Desarrollador principal</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Perfil de Twitter de Larry Parker"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Perfil de Facebook de Larry Parker"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Perfil de LinkedIn de Larry Parker"><i class="fab fa-linkedin-in"></i></a>
+                            <h4>Exequiel Chao</h4>
+                            <p class="text-muted">Abogado</p>
                         </div>
                     </div>
                 </div>
@@ -373,15 +312,15 @@
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; Tu sitio web 2023</div>
+                    <div class="col-lg-4 text-lg-start">&copy; 2026 HT Legales. Todos los derechos reservados. Catamarca</div>
                     <div class="col-lg-4 my-3 my-lg-0">
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="#!">Política de privacidad</a>
-                        <a class="link-dark text-decoration-none" href="#!">Términos de uso</a>
+                        <a class="text-decoration-none me-3" href="#privacyModal" data-bs-toggle="modal" aria-controls="privacyModal">Política de privacidad</a>
+                        <a class="text-decoration-none" href="#termsModal" data-bs-toggle="modal" aria-controls="termsModal">Términos de uso</a>
                     </div>
                 </div>
             </div>
@@ -598,9 +537,69 @@
             </div>
         </div>
         <!-- Bootstrap core JS-->
+        <!-- Modales de Política & Términos (contenido en la misma página) -->
+        <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="privacyModalLabel">Política de privacidad</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>En HT Legales valoramos tu privacidad. Esta política describe qué datos recopilamos, con qué finalidad y cómo los protegemos.</p>
+                        <h6>1. Datos que recopilamos</h6>
+                        <p>Pueden incluir nombre, correo electrónico, teléfono y la información que facilites al enviar un formulario de contacto.</p>
+                        <h6>2. Finalidad</h6>
+                        <p>Usamos los datos para responder consultas, gestionar servicios y enviar información relevante cuando lo autorices.</p>
+                        <h6>3. Conservación y seguridad</h6>
+                        <p>Conservamos datos sólo el tiempo necesario y adoptamos medidas técnicas y organizativas para protegerlos.</p>
+                        <h6>4. Contacto</h6>
+                        <p>Si querés ejercer tus derechos o tenés consultas sobre privacidad, escribinos a contacto@htlegales.example</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="termsModalLabel">Términos de uso</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Estos Términos regulan el uso de este sitio web. Al utilizarlo aceptás estos términos.</p>
+                        <h6>1. Acceso y uso</h6>
+                        <p>El acceso al sitio es gratuito; no obstante, el uso indebido puede llevar a la restricción del acceso.</p>
+                        <h6>2. Propiedad intelectual</h6>
+                        <p>Los contenidos, marcas y recursos del sitio pertenecen a HT Legales o a sus colaboradores y están protegidos por la normativa vigente.</p>
+                        <h6>3. Responsabilidad</h6>
+                        <p>El contenido tiene fines informativos y no sustituye el asesoramiento profesional específico.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <!-- Core theme JS (cargado con versión para evitar caché) -->
+        <script>
+            // Usamos el mismo ASSET_VERSION declarado en el head.
+            // Si lo cambiás, actualizá también el valor en el <head> (ASSET_VERSION).
+            (function(){
+                var ver = '1';
+                try{ if(window.ASSET_VERSION) ver = window.ASSET_VERSION; }catch(e){/*ignore*/}
+                var s = document.createElement('script');
+                s.src = 'js/scripts.js?v=' + ver;
+                s.defer = true;
+                document.body.appendChild(s);
+            })();
+        </script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->

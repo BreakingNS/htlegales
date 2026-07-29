@@ -34,16 +34,16 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #ffc800;
-  --bs-secondary: #6c757d;
+  --bs-primary: #BB6C43; /* botón principal - té terracota/ámbar */
+  --bs-secondary: #CCB499; /* tonos beige */
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc800;
   --bs-danger: #dc3545;
-  --bs-light: #f8f9fa;
-  --bs-dark: #212529;
-  --bs-primary-rgb: 255, 200, 0;
-  --bs-secondary-rgb: 108, 117, 125;
+  --bs-light: #EBEFEE; /* fondo principal / secciones claras */
+  --bs-dark: #4A413C; /* marrón oscuro para navbar/footer/textos */
+  --bs-primary-rgb: 187, 108, 67;
+  --bs-secondary-rgb: 204, 180, 153;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 200, 0;
@@ -52,8 +52,8 @@
   --bs-dark-rgb: 33, 37, 41;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-body-color-rgb: 33, 37, 41;
-  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-body-color-rgb: 74, 65, 60; /* rgb of #4A413C */
+  --bs-body-bg-rgb: 235, 239, 238; /* rgb of #EBEFEE */
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -61,8 +61,8 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-color: #4A413C;
+  --bs-body-bg: #EBEFEE;
   --bs-border-width: 1px;
   --bs-border-style: solid;
   --bs-border-color: #dee2e6;
@@ -73,8 +73,8 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #ffc800;
-  --bs-link-hover-color: #cca000;
+  --bs-link-color: #BB6C43;
+  --bs-link-hover-color: #A85B36;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff4cc;
 }
@@ -308,6 +308,129 @@ img,
 svg {
   vertical-align: middle;
 }
+
+/* Paleta de proyecto - reglas adicionales */
+:root {
+  --app-bg-main: #EBEFEE; /* fondo principal */
+  --app-dark: #4A413C; /* navbar / footer / textos oscuros */
+  --app-accent: #BB6C43; /* botones primarios */
+  --app-secondary-1: #CCB499; /* fondos secundarios */
+  --app-secondary-2: #C8906D; /* bordes / acentos suaves */
+}
+
+body {
+  background-color: var(--app-bg-main);
+  color: var(--app-dark);
+}
+
+/* Navbar y footer */
+.navbar, .footer {
+  background-color: var(--app-dark) !important;
+}
+.navbar .navbar-brand img { height: 36px; }
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: var(--app-bg-main) !important;
+}
+.navbar .nav-link:hover {
+  color: var(--app-accent) !important;
+}
+
+footer.footer {
+  color: var(--app-bg-main);
+}
+
+/* Botones primarios */
+.btn-primary {
+  background-color: var(--app-accent);
+  border-color: var(--app-accent);
+  color: #fff;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #A85B36;
+  border-color: #A85B36;
+}
+
+/* Links */
+a {
+  color: var(--app-accent);
+}
+a:hover { color: #A85B36; }
+
+/* Secciones claras y tarjetas */
+.page-section.bg-light {
+  background-color: var(--app-bg-main) !important;
+}
+.card, .service-card {
+  background-color: var(--app-secondary-1);
+  border: 1px solid var(--app-secondary-2);
+}
+
+/* Formularios */
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(187,108,67,0.15);
+  border-color: var(--app-accent);
+}
+
+/* Small adjustments */
+.section-subheading.text-muted { color: rgba(74,65,60,0.9); }
+
+/* Imágenes circulares para los servicios */
+.service-icon {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 10px solid var(--app-bg-main);
+  display: block;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+}
+
+@media (max-width: 767px) {
+  .service-icon { width: 140px; height: 140px; border-width:8px; }
+}
+
+/* Forzar estilo de botones primarios para la paleta institucional */
+.btn-primary,
+.btn-primary:active,
+.btn-primary.active {
+  background-color: var(--app-accent) !important;
+  border-color: var(--app-accent) !important;
+  color: #ffffff !important;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:focus-visible {
+  background-color: #A85B36 !important; /* versión más oscura del acento */
+  border-color: #A85B36 !important;
+  color: #ffffff !important;
+}
+.btn-outline-primary {
+  color: var(--app-accent) !important;
+  border-color: var(--app-accent) !important;
+}
+.btn-outline-primary:hover {
+  background-color: var(--app-accent) !important;
+  color: #ffffff !important;
+}
+
+/* Footer: asegurar contraste para enlaces sobre fondo oscuro */
+.footer a {
+  color: var(--app-bg-main) !important; /* texto claro */
+  opacity: 0.95;
+}
+.footer a:hover,
+.footer a:focus {
+  color: var(--app-accent) !important; /* acento al pasar mouse */
+  text-decoration: underline;
+}
+
+/* Separador visual pequeño en links del footer */
+.footer .text-lg-end a + a {
+  margin-left: .5rem;
+}
+
 
 table {
   caption-side: bottom;
