@@ -23,7 +23,7 @@
         <!-- Core theme CSS (includes Bootstrap) - cargados con versión para cache-busting -->
         <script>
             // Cambia SOLO el valor de ASSET_VERSION para forzar recarga de assets en producción
-            var ASSET_VERSION = '2';
+            var ASSET_VERSION = '3';
             (function(){
                 var l = document.createElement('link');
                 l.rel = 'stylesheet';
@@ -70,53 +70,72 @@
                 <div class="row text-center">
                     <!-- 1 -->
                     <div class="col-md-4 mb-4">
-                        <img class="service-icon mx-auto d-block" src="assets/img/services/1.jpg" alt="Contratos" />
-                        <h4 class="my-3">Redacción de Contratos</h4>
-                        <p class="text-muted"><strong>Redacción contractual:</strong> Redacción de contratos claros y seguros para sus operaciones comerciales (compracenta, suministro, locaciones y más).</p>
-                        <p class="text-muted"><strong>Negociación:</strong> Redacción y revisión contractual orientada a consolidar la seguridad jurídica de su negocio.</p>
-                        <p class="text-muted"><strong>Ejecución y control:</strong> Auditoría de obligaciones y mitigación de riesgos por incumplimiento.</p>
+                        <div class="service-card">
+                            <a class="portfolio-link text-decoration-none text-dark" data-bs-toggle="modal" href="#serviceModal1">
+                                <img class="service-icon mx-auto d-block" src="assets/img/services/1.jpg" alt="Contratos" />
+                                <h4 class="my-3">Redacción de Contratos</h4>
+                                <p class="text-muted">Redacción de contratos claros y seguros para sus operaciones comerciales.</p>
+                                <div class="fw-bold text-primary small">Ver detalles →</div>
+                            </a>
+                        </div>
                     </div>
                     <!-- 2 -->
                     <div class="col-md-4 mb-4">
-                        <img class="service-icon mx-auto d-block" src="assets/img/services/2.jpg" alt="Asesoramiento societario" />
-                        <h4 class="my-3">Asesoramiento Societario</h4>
-                        <p class="text-muted"><strong>Estructuras Societarias:</strong> Constitución ágil de SA, SRL, SAS y UTEs para proyectos locales.</p>
-                        <p class="text-muted"><strong>Gobierno y reformas:</strong> Modificaciones estatutarias y resolución de conflictos entre socios.</p>
-                        <p class="text-muted"><strong>Contralor local:</strong> Gestión eficiente y defensa técnica ante la IGPJ.</p>
-                        <p class="text-muted"><strong>M&amp;A:</strong> Asesoramiento integral en fusiones, adquisiciones y reorganizaciones.</p>
+                        <div class="service-card">
+                            <a class="portfolio-link text-decoration-none text-dark" data-bs-toggle="modal" href="#serviceModal2">
+                                <img class="service-icon mx-auto d-block" src="assets/img/services/2.jpg" alt="Asesoramiento societario" />
+                                <h4 class="my-3">Asesoramiento Societario</h4>
+                                <p class="text-muted">Constitución y adaptación de estructuras societarias, gobierno corporativo y M&amp;A.</p>
+                                <div class="fw-bold text-primary small">Ver detalles →</div>
+                            </a>
+                        </div>
                     </div>
                     <!-- 3 -->
                     <div class="col-md-4 mb-4">
-                        <img class="service-icon mx-auto d-block" src="assets/img/services/3.jpg" alt="Relaciones Laborales" />
-                        <h4 class="my-3">Relaciones Laborales</h4>
-                        <p class="text-muted"><strong>Contratación inteligente:</strong> Esquemas de vinculación seguros y adaptados a la normativa.</p>
-                        <p class="text-muted"><strong>Blindaje preventivo:</strong> Auditorías de cumplimiento y manuales internos para evitar pasivos.</p>
-                        <p class="text-muted"><strong>Gestión de salidas:</strong> Resolución estratégica de desvinculaciones y conflictos de alta sensibilidad.</p>
+                        <div class="service-card">
+                            <a class="portfolio-link text-decoration-none text-dark" data-bs-toggle="modal" href="#serviceModal3">
+                                <img class="service-icon mx-auto d-block" src="assets/img/services/3.jpg" alt="Relaciones Laborales" />
+                                <h4 class="my-3">Relaciones Laborales</h4>
+                                <p class="text-muted">Prevención y gestión de conflictos laborales, auditorías y desvinculaciones.</p>
+                                <div class="fw-bold text-primary small">Ver detalles →</div>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="row text-center">
                     <!-- 4 -->
                     <div class="col-md-4 mb-4">
-                        <img class="service-icon mx-auto d-block" src="assets/img/services/4.jpg" alt="Concursos y Quiebras" />
-                        <h4 class="my-3">Concursos y Quiebras</h4>
-                        <p class="text-muted"><strong>Protección de créditos:</strong> Verificaciones tempestivas y defensa patrimonial en contextos de crisis.</p>
-                        <p class="text-muted"><strong>Litigios concursales:</strong> Representación técnica en acuerdos preventivos y procesos falimentarios.</p>
+                        <div class="service-card">
+                            <a class="portfolio-link text-decoration-none text-dark" data-bs-toggle="modal" href="#serviceModal4">
+                                <img class="service-icon mx-auto d-block" src="assets/img/services/4.jpg" alt="Concursos y Quiebras" />
+                                <h4 class="my-3">Concursos y Quiebras</h4>
+                                <p class="text-muted">Defensa patrimonial y representación en procesos concursales.</p>
+                                <div class="fw-bold text-primary small">Ver detalles →</div>
+                            </a>
+                        </div>
                     </div>
                     <!-- 5 -->
                     <div class="col-md-4 mb-4">
-                        <img class="service-icon mx-auto d-block" src="assets/img/services/5.jpg" alt="Propiedad Intelectual" />
-                        <h4 class="my-3">Propiedad Intelectual</h4>
-                        <p class="text-muted"><strong>Registro oficial:</strong> Gestión y vigilancia estratégica de marcas y logotipos ante el INPI.</p>
-                        <p class="text-muted"><strong>Defensa activa:</strong> Acciones firmes contra el uso indebido, la imitación o la competencia desleal.</p>
+                        <div class="service-card">
+                            <a class="portfolio-link text-decoration-none text-dark" data-bs-toggle="modal" href="#serviceModal5">
+                                <img class="service-icon mx-auto d-block" src="assets/img/services/5.jpg" alt="Propiedad Intelectual" />
+                                <h4 class="my-3">Propiedad Intelectual</h4>
+                                <p class="text-muted">Registro y protección de marcas, diseños y derechos de autor.</p>
+                                <div class="fw-bold text-primary small">Ver detalles →</div>
+                            </a>
+                        </div>
                     </div>
                     <!-- 6 -->
                     <div class="col-md-4 mb-4">
-                        <img class="service-icon mx-auto d-block" src="assets/img/services/6.jpg" alt="Defensa del Consumidor" />
-                        <h4 class="my-3">Defensa del Consumidor</h4>
-                        <p class="text-muted"><strong>Planes de ahorro y contratos financieros:</strong> Asistencia jurídica frente a desequilibrios contractuales, indexaciones desproporcionadas y prácticas abusivas por parte de entidades bancarias o financieras.</p>
-                        <p class="text-muted"><strong>Reclamos y recursos:</strong> Gestionamos medidas urgentes y defensas legales para frenar ejecuciones o cobros indebidos.</p>
-                        <p class="text-muted"><strong>Protección integral:</strong> Acompañamiento en mediaciones y reclamos por incumplimientos de contratos de consumo.</p>
+                        <div class="service-card">
+                            <a class="portfolio-link text-decoration-none text-dark" data-bs-toggle="modal" href="#serviceModal6">
+                                <img class="service-icon mx-auto d-block" src="assets/img/services/6.jpg" alt="Defensa del Consumidor" />
+                                <h4 class="my-3">Defensa del Consumidor</h4>
+                                <p class="text-muted">Asistencia frente a prácticas abusivas, reclamos y medidas urgentes.</p>
+                                <div class="fw-bold text-primary small">Ver detalles →</div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -563,6 +582,161 @@
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Cerrar proyecto
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service modals (reutilizan estructura de portafolio) -->
+        <div class="portfolio-modal modal fade" id="serviceModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Cerrar modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">Redacción de Contratos</h2>
+                                    <p class="item-intro text-muted">Servicios orientados a la redacción, negociación y control de contratos comerciales.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/services/1.jpg" alt="Redacción de Contratos" />
+                                    <p><strong>Redacción contractual:</strong> Redacción de contratos claros y seguros para sus operaciones comerciales (compra-venta, suministro, locaciones y más).</p>
+                                    <p><strong>Negociación:</strong> Redacción y revisión contractual orientada a consolidar la seguridad jurídica de su negocio.</p>
+                                    <p><strong>Ejecución y control:</strong> Auditoría de obligaciones y mitigación de riesgos por incumplimiento.</p>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Cerrar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-modal modal fade" id="serviceModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Cerrar modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">Asesoramiento Societario</h2>
+                                    <p class="item-intro text-muted">Constitución, gobierno corporativo y operaciones societarias.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/services/2.jpg" alt="Asesoramiento Societario" />
+                                    <p><strong>Estructuras Societarias:</strong> Constitución ágil de SA, SRL, SAS y UTEs para proyectos locales.</p>
+                                    <p><strong>Gobierno y reformas:</strong> Modificaciones estatutarias y resolución de conflictos entre socios.</p>
+                                    <p><strong>Contralor local:</strong> Gestión eficiente y defensa técnica ante la IGPJ.</p>
+                                    <p><strong>M&amp;A:</strong> Asesoramiento integral en fusiones, adquisiciones y reorganizaciones.</p>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Cerrar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-modal modal fade" id="serviceModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Cerrar modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">Relaciones Laborales</h2>
+                                    <p class="item-intro text-muted">Prevención, cumplimiento y gestión de salidas laborales.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/services/3.jpg" alt="Relaciones Laborales" />
+                                    <p><strong>Contratación inteligente:</strong> Esquemas de vinculación seguros y adaptados a la normativa.</p>
+                                    <p><strong>Blindaje preventivo:</strong> Auditorías de cumplimiento y manuales internos para evitar pasivos.</p>
+                                    <p><strong>Gestión de salidas:</strong> Resolución estratégica de desvinculaciones y conflictos de alta sensibilidad.</p>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Cerrar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-modal modal fade" id="serviceModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Cerrar modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">Concursos y Quiebras</h2>
+                                    <p class="item-intro text-muted">Asesoramiento y representación en situaciones de crisis empresarial.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/services/4.jpg" alt="Concursos y Quiebras" />
+                                    <p><strong>Protección de créditos:</strong> Verificaciones tempestivas y defensa patrimonial en contextos de crisis.</p>
+                                    <p><strong>Litigios concursales:</strong> Representación técnica en acuerdos preventivos y procesos falimentarios.</p>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Cerrar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-modal modal fade" id="serviceModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Cerrar modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">Propiedad Intelectual</h2>
+                                    <p class="item-intro text-muted">Registro, vigilancia y defensa de activos intangibles.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/services/5.jpg" alt="Propiedad Intelectual" />
+                                    <p><strong>Registro oficial:</strong> Gestión y vigilancia estratégica de marcas y logotipos ante el INPI.</p>
+                                    <p><strong>Defensa activa:</strong> Acciones firmes contra el uso indebido, la imitación o la competencia desleal.</p>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Cerrar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-modal modal fade" id="serviceModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Cerrar modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">Defensa del Consumidor</h2>
+                                    <p class="item-intro text-muted">Asistencia frente a abusos contractuales y cobros indebidos.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/services/6.jpg" alt="Defensa del Consumidor" />
+                                    <p><strong>Planes de ahorro y contratos financieros:</strong> Asistencia jurídica frente a desequilibrios contractuales, indexaciones desproporcionadas y prácticas abusivas por parte de entidades bancarias o financieras.</p>
+                                    <p><strong>Reclamos y recursos:</strong> Gestionamos medidas urgentes y defensas legales para frenar ejecuciones o cobros indebidos.</p>
+                                    <p><strong>Protección integral:</strong> Acompañamiento en mediaciones y reclamos por incumplimientos de contratos de consumo.</p>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Cerrar
                                     </button>
                                 </div>
                             </div>
