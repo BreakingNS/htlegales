@@ -362,10 +362,39 @@ a:hover { color: #A85B36; }
 .page-section.bg-light {
   background-color: var(--app-bg-main) !important;
 }
-.card, .service-card {
-  background-color: var(--app-secondary-1);
-  border: 1px solid var(--app-secondary-2);
+/* Tarjetas de servicio: aspecto limpio, bordes redondeados y animación al pasar cursor */
+.service-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+  box-shadow: 0 6px 18px rgba(12,18,28,0.06);
+  overflow: hidden;
 }
+.service-card .portfolio-link {
+  display: block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.75rem;
+}
+.service-card:focus-within,
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(12,18,28,0.12);
+  border-color: rgba(var(--bs-primary-rgb), 0.18);
+}
+.service-card:focus-within .portfolio-link,
+.service-card:hover .portfolio-link {
+  text-decoration: none;
+}
+
+/* Pequeño indicador en 'Ver detalles' para mayor contraste */
+.service-card .fw-bold.text-primary {
+  color: var(--app-accent) !important;
+}
+
+/* Ajuste para que los colores secundarios antiguos sigan disponibles si se usan */
+.card { background-color: var(--app-secondary-1); border: 1px solid var(--app-secondary-2); }
 
 /* Formularios */
 .form-control:focus {
@@ -377,18 +406,34 @@ a:hover { color: #A85B36; }
 .section-subheading.text-muted { color: rgba(74,65,60,0.9); }
 
 /* Imágenes circulares para los servicios */
+
 .service-icon {
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
   border-radius: 50%;
-  border: 10px solid var(--app-bg-main);
+  border: 12px solid var(--app-bg-main);
   display: block;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+  margin-bottom: .75rem;
+  box-shadow: 0 8px 22px rgba(12,18,28,0.08);
+  transition: transform 250ms ease, box-shadow 250ms ease;
 }
 
 @media (max-width: 767px) {
-  .service-icon { width: 140px; height: 140px; border-width:8px; }
+  .service-icon { width: 128px; height: 128px; border-width:10px; }
+
+/* Efecto sutil sobre la imagen cuando se pasa el cursor sobre la card */
+.service-card:hover .service-icon,
+.service-card:focus-within .service-icon {
+  transform: translateY(-4px) rotate(-2deg) scale(1.03);
+  box-shadow: 0 20px 40px rgba(12,18,28,0.14);
+}
+
+/* Accesibilidad: mostrar outline al navegar con teclado */
+.service-card:focus-within {
+  outline: 3px solid rgba(var(--bs-primary-rgb), 0.12);
+  outline-offset: 6px;
+}
 }
 
 /* Forzar estilo de botones primarios para la paleta institucional */
