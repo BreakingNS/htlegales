@@ -1,4 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 48">
-  <title>HT Legales</title>
-  <text x="0" y="36" font-family="Montserrat, Arial, sans-serif" font-size="36" font-weight="700" fill="#fed136">HT Legales</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 180">
+    <defs>
+        <style>
+            .gold{fill:#c79a3b;}
+            .dark{fill:#4a433e;}
+            .line{stroke:#4a433e;stroke-width:2;}
+            .title{
+                font-family: "Georgia","Times New Roman",serif;
+                font-size:78px;
+                fill:#4a433e;
+            }
+            .goldText{
+                fill:#c79a3b;
+            }
+        </style>
+    </defs>
+
+    <!-- Monograma -->
+    <g transform="translate(10,10)">
+        <path d="M128 8
+                 A82 82 0 1 0 128 172" fill="none" stroke="#c79a3b" stroke-width="6"></path>
+
+        <text x="48" y="122" font-family="Georgia" font-size="118" font-weight="bold" fill="#4a433e">H</text>
+
+        <text x="103" y="146" font-family="Georgia" font-size="118" font-weight="bold" fill="#c79a3b">T</text>
+    </g>
+
+    <!-- Separador -->
+    <line x1="270" y1="30" x2="270" y2="150" class="line"></line>
+
+    <!-- Texto -->
+    <text x="320" y="120" class="title">
+        HT <tspan class="goldText">Legales</tspan>
+    </text>
 </svg>

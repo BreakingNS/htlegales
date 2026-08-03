@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 130" width="100%" height="100%">
+    <defs>
+        <style>
+            .nogalLight { fill: #EBEFEE; }
+            .amber { fill: #C8906D; }
+            .line { stroke: #CCB499; stroke-width: 3.5; opacity: 0.85; }
+            .title {
+                font-family: "Georgia", "Times New Roman", serif;
+                font-size: 58px;
+                font-weight: bold;
+                fill: #EBEFEE;
+            }
+            .amberText {
+                fill: #C8906D;
+                font-weight: bold;
+            }
+        </style>
+    </defs>
+
+    <!-- Monograma Robusto -->
+    <g transform="translate(5, 5)">
+        <!-- Arco Ámbar -->
+        <path d="M95 6 A60 60 0 1 0 95 114"
+              fill="none"
+              stroke="#C8906D"
+              stroke-width="7"/>
+
+        <!-- Letra H -->
+        <text x="36" y="85"
+              font-family="Georgia"
+              font-size="82"
+              font-weight="bold"
+              fill="#EBEFEE">H</text>
+
+        <!-- Letra T -->
+        <text x="76" y="100"
+              font-family="Georgia"
+              font-size="82"
+              font-weight="bold"
+              fill="#C8906D">T</text>
+    </g>
+
+    <!-- Separador Vertical -->
+    <line x1="190" y1="18" x2="190" y2="102" class="line"/>
+
+    <!-- Texto HT Legales (Con margen suficiente a la derecha) -->
+    <text x="215" y="86" class="title">
+        HT <tspan class="amberText">Legales</tspan>
+    </text>
+</svg>

@@ -23,7 +23,7 @@
         <!-- Core theme CSS (includes Bootstrap) - cargados con versión para cache-busting -->
         <script>
             // Cambia SOLO el valor de ASSET_VERSION para forzar recarga de assets en producción
-            var ASSET_VERSION = '5';
+            var ASSET_VERSION = '6';
             (function(){
                 var l = document.createElement('link');
                 l.rel = 'stylesheet';
@@ -36,7 +36,10 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="Logo" /></a>
+                <!-- <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="Logo" /></a> -->
+                <a class="navbar-brand py-1" href="#page-top">
+                    <img src="assets/img/logo-ht.svg" alt="HT Legales" style="height: 55px; width: auto;" />
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Alternar navegación">
                     Menú
                     <i class="fas fa-bars ms-1"></i>
@@ -44,9 +47,9 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portafolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">Acerca de</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#team">Equipo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Servicios en Mineria</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">El Estudio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Profesionales</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
                     </ul>
                 </div>
@@ -65,7 +68,7 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Servicios</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted"></h3>
                 </div>
                 <div class="row text-center">
                     <!-- 1 -->
@@ -144,8 +147,8 @@
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Portafolio</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">Servicios en Mineria</h2>
+                    <h3 class="section-subheading text-muted">Soluciones jurídicas y de asesoramiento integral adaptadas a la dinámica empresarial de la región.</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-sm-6 mb-4">
@@ -153,14 +156,15 @@
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <div class="portfolio-hover-content">Ver más...</div>
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                                <div class="portfolio-caption">
+                                    <div class="portfolio-caption-heading">Contratos en Mineria</div>
+                                    <div class="portfolio-caption-subheading text-muted">Redacción, revisión y negociación de instrumentos jurídicos orientados a dar solidez y previsibilidad a toda la cadena de valor del negocio minero.</div>
+                                    <div class="fw-bold text-primary small mt-3">Ver detalles →</div>
+                                </div>
                             </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Contratos en Mineria</div>
-                                <div class="portfolio-caption-subheading text-muted">Redacción, revisión y negociación de instrumentos jurídicos orientados a dar solidez y previsibilidad a toda la cadena de valor del negocio minero.</div>
-                            </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 mb-4">
@@ -168,14 +172,15 @@
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <div class="portfolio-hover-content">Ver más...</div>
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                                <div class="portfolio-caption">
+                                    <div class="portfolio-caption-heading">Servicios para Proveedores Mineros</div>
+                                    <div class="portfolio-caption-subheading text-muted">Asesoramiento legal integral para contratistas y empresas de servicios que operan en la cadena de valor minera, asegurando previsibilidad en sus vínculos operativos.</div>
+                                    <div class="fw-bold text-primary small mt-3">Ver detalles →</div>
+                                </div>
                             </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Servicios para Proveedores Mineros</div>
-                                <div class="portfolio-caption-subheading text-muted">Asesoramiento legal integral para contratistas y empresas de servicios que operan en la cadena de valor minera, asegurando previsibilidad en sus vínculos operativos.</div>
-                            </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 mb-4">
@@ -183,14 +188,15 @@
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <div class="portfolio-hover-content">Ver más...</div>
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
+                                <div class="portfolio-caption">
+                                    <div class="portfolio-caption-heading">Estructuras Societarias en Minería</div>
+                                    <div class="portfolio-caption-subheading text-muted">Diseño, constitución y optimización de vehículos jurídicos y asociativos adaptados a la escala, inversión y riesgo del negocio minero.</div>
+                                    <div class="fw-bold text-primary small mt-3">Ver detalles →</div>
+                                </div>
                             </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Estructuras Societarias en Minería</div>
-                                <div class="portfolio-caption-subheading text-muted">Diseño, constitución y optimización de vehículos jurídicos y asociativos adaptados a la escala, inversión y riesgo del negocio minero.</div>
-                            </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
@@ -198,14 +204,15 @@
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <div class="portfolio-hover-content">Ver más...</div>
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
+                                <div class="portfolio-caption">
+                                    <div class="portfolio-caption-heading">Compliance Ambiental y Regulatorio</div>
+                                    <div class="portfolio-caption-subheading text-muted">Blindaje legal y gestión preventiva ante los organismos de control para proteger la rentabilidad del proyecto frente a sanciones y contingencias fiscales o ambientales.</div>
+                                    <div class="fw-bold text-primary small mt-3">Ver detalles →</div>
+                                </div>
                             </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Compliance Ambiental y Regulatorio</div>
-                                <div class="portfolio-caption-subheading text-muted">Blindaje legal y gestión preventiva ante los organismos de control para proteger la rentabilidad del proyecto frente a sanciones y contingencias fiscales o ambientales.</div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -214,19 +221,34 @@
         <!-- About-->
         <section class="page-section" id="about">
             <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Sobre Nosotros</h2>
-                    <h3 class="section-subheading text-muted fs-3">Estudio joven y dinámico adaptado a las ultimas estructuras de negocios, somos un aliado estrategico para aquellos que desean proteger su inversión y patrimonio en la provincia de Catamarca.</h3>
+                <div class="text-center py-4">
+                    <!-- Título Principal (Marrón carbón oscuro, bien definido) -->
+                    <h2 class="section-heading text-uppercase fw-bold mb-3" style="color: #4A413C; letter-spacing: 1px;">
+                        Nuestra Firma
+                    </h2>
+                    
+                    <!-- Lema / Bajada Cursiva (Color madera/ámbar oscuro con buen contraste) -->
+                    <h3 class="fst-italic fw-normal fs-5 mb-4" style="color: #BB6C43;">
+                        Compromiso, solvencia técnica y visión estratégica al servicio de nuestros clientes.
+                    </h3>
+                    
+                    <!-- Párrafo Descriptivo Principal (Texto oscuro, legibilidad perfecta para inversores) -->
+                    <div class="row justify-content-center">
+                        <div class="col-lg-9 col-xl-8">
+                            <p class="fs-5 lh-lg mb-0" style="color: #2C2523; font-weight: 500;">
+                                Somos un estudio joven y dinámico adaptado a las últimas estructuras de negocios, posicionándonos como un aliado estratégico para quienes buscan proteger su inversión y patrimonio en la provincia de Catamarca.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                
             </div>
         </section>
         <!-- Team-->
         <section class="page-section bg-light" id="team">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Nuestro increíble equipo</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">Cuerpo Profesional</h2>
+                    <h3 class="section-subheading text-muted">Abogados y consultores con sólida formación académica y trayectoria en derecho corporativo.</h3>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
@@ -239,13 +261,10 @@
                     <div class="col-lg-6">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
-                            <h4>Exequiel Chao</h4>
+                            <h4>Ezequiel Chao</h4>
                             <p class="text-muted">Abogado</p>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
                 </div>
             </div>
         </section>
@@ -588,7 +607,7 @@
                                     <h2 class="text-uppercase">Redacción de Contratos</h2>
                                     <p class="item-intro text-muted">Servicios orientados a la redacción, negociación y control de contratos comerciales.</p>
                                     
-                                    <p><strong>Redacción contractual:</strong> Redacción de contratos claros y seguros para sus operaciones comerciales (compra-venta, suministro, locaciones y más).</p>
+                                    <p><strong>Redacción contractual:</strong> Confección de acuerdos claros y seguros para operaciones comerciales, incluyendo contratos de compraventa, suministro, locaciones de obra, prestación de servicios especializados, así como contratos de crédito o financiamiento para capital de trabajo y construcción de infraestructura.</p>
                                     <p><strong>Negociación:</strong> Redacción y revisión contractual orientada a consolidar la seguridad jurídica de su negocio.</p>
                                     <p><strong>Ejecución y control:</strong> Auditoría de obligaciones y mitigación de riesgos por incumplimiento.</p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -614,7 +633,7 @@
                                     <h2 class="text-uppercase">Asesoramiento Societario</h2>
                                     <p class="item-intro text-muted">Constitución, gobierno corporativo y operaciones societarias.</p>
                                     
-                                    <p><strong>Estructuras Societarias:</strong> Constitución ágil de SA, SRL, SAS y UTEs para proyectos locales.</p>
+                                    <p><strong>Estructuras Societarias:</strong> Constitución ágil de SA, SRL, SAS y UTEs adaptados a la escala y exigencias de los negocios y proyectos en la región.</p>
                                     <p><strong>Gobierno y reformas:</strong> Modificaciones estatutarias y resolución de conflictos entre socios.</p>
                                     <p><strong>Contralor local:</strong> Gestión eficiente y defensa técnica ante la IGPJ.</p>
                                     <p><strong>M&amp;A:</strong> Asesoramiento integral en fusiones, adquisiciones y reorganizaciones.</p>
@@ -649,10 +668,6 @@
                                         Cerrar
                                     </button>
                                 </div>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                    <i class="fas fa-xmark me-1"></i>
-                                    Cerrar
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -671,8 +686,9 @@
                                     <h2 class="text-uppercase">Concursos y Quiebras</h2>
                                     <p class="item-intro text-muted">Asesoramiento y representación en situaciones de crisis empresarial.</p>
                                     
-                                    <p><strong>Protección de créditos:</strong> Verificaciones tempestivas y defensa patrimonial en contextos de crisis.</p>
-                                    <p><strong>Litigios concursales:</strong> Representación técnica en acuerdos preventivos y procesos falimentarios.</p>
+                                    <p><strong>Blindaje crediticio:</strong> Verificaciones tempestivas y estrategias de cobro prioritario para resguardar su capital en contextos de crisis e insolvencia de contrapartes.</p>
+                                    <p><strong>Litigios concursales:</strong> Representación técnica de alta complejidad en acuerdos preventivos extrajudiciales y procesos falimentarios.</p>
+                                    <p><strong>Protección de créditos:</strong> Negociación estratégica de acuerdos de reestructuración de pasivos orientados a blindar la continuidad del negocio y aislar los activos críticos frente a escenarios de cesación de pagos.</p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Cerrar
