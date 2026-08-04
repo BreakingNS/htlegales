@@ -320,9 +320,9 @@
                             <div class="d-flex align-items-center">
                                 <!-- Replaced social icons with contact shortcuts (obfuscated) -->
                                 <a class="btn btn-dark btn-social me-2 contact-link" data-type="email" data-enc="moc.kooltuo@1selgaelth" href="#" aria-label="Correo"><i class="fas fa-envelope"></i></a>
-                                <a class="btn whatsapp-cta btn-lg me-2" href="#" role="button" aria-label="Escribir por WhatsApp" rel="nofollow noopener">
-                                    <i class="fab fa-whatsapp me-2"></i>
-                                    Escribinos por WhatsApp
+                                <!-- Footer-only WhatsApp icon (copy) - icon only, matches email button style, no green halo -->
+                                <a class="btn btn-dark btn-social footer-whatsapp me-2" href="#" role="button" aria-label="WhatsApp" rel="nofollow noopener">
+                                    <i class="fab fa-whatsapp"></i>
                                 </a>
                             </div>
                         </div>
@@ -855,6 +855,12 @@
                     var waNumber = tel.replace(/^\+/, '');
                     wa.href = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent('Hola, necesito asesoramiento legal sobre un asunto comercial. ¿Tienen disponibilidad para una consulta?');
                     wa.setAttribute('rel','nofollow noopener noreferrer');
+                    // Also assign footer-only whatsapp icon(s) the same link
+                    document.querySelectorAll('.footer-whatsapp').forEach(function(f){
+                        f.href = wa.href;
+                        f.setAttribute('rel','nofollow noopener noreferrer');
+                        f.setAttribute('target','_blank');
+                    });
                 }
             });
         </script>
