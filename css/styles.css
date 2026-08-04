@@ -336,6 +336,55 @@ body {
   color: var(--app-accent) !important;
 }
 
+/* Underline animation for active / hovered nav items */
+.navbar .nav-link {
+  position: relative;
+  padding-bottom: .35rem; /* space for underline */
+}
+.navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -6px;
+  height: 3px;
+  width: 0;
+  background: var(--app-accent);
+  border-radius: 3px;
+  transition: width 260ms cubic-bezier(.2,.9,.2,1), opacity 200ms ease;
+  opacity: 0;
+}
+.navbar .nav-link:hover::after,
+.navbar .nav-link:focus::after {
+  width: 40%;
+  opacity: 1;
+}
+.navbar .nav-link.active::after {
+  width: 48%;
+  opacity: 1;
+}
+
+/* Destacar Contacto permanentemente */
+.navbar .nav-link[href="#contact"] {
+  background: linear-gradient(180deg, rgba(var(--bs-primary-rgb),0.98), rgba(var(--bs-primary-rgb),0.98));
+  color: #fff !important;
+  padding: .38rem .9rem;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(11,15,20,0.12);
+  transition: transform 180ms ease, box-shadow 180ms ease, padding 160ms ease;
+}
+.navbar .nav-link[href="#contact"]::after { display:none; }
+
+/* Ajuste cuando el navbar está encogido: reacción más compacta */
+#mainNav.navbar-shrink .navbar .nav-link[href="#contact"] {
+  padding: .22rem .7rem;
+  box-shadow: 0 4px 12px rgba(11,15,20,0.10);
+}
+
+@media (max-width: 767px) {
+  .navbar .nav-link::after { display: none; }
+}
+
 /* Contacto: destacar siempre un poco respecto al resto */
 footer.footer {
   color: var(--app-bg-main);
