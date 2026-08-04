@@ -23,7 +23,7 @@
         <!-- Core theme CSS (includes Bootstrap) - cargados con versión para cache-busting -->
         <script>
             // Cambia SOLO el valor de ASSET_VERSION para forzar recarga de assets en producción
-            var ASSET_VERSION = '7';
+            var ASSET_VERSION = '8';
             (function(){
                 var l = document.createElement('link');
                 l.rel = 'stylesheet';
@@ -274,78 +274,82 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Contáctanos</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">Consultanos sin compromiso. Nuestro equipo responde a la brevedad.</h3>
                 </div>
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- * * SB Forms Contact Form * *-->
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- This form is pre-integrated with SB Forms.-->
-                <!-- To make this form functional, sign up at-->
-                <!-- https://startbootstrap.com/solution/contact-forms-->
-                <!-- to get an API token!-->
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <!-- Name input-->
-                                <input class="form-control" id="name" type="text" placeholder="Tu nombre *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">El nombre es obligatorio.</div>
-                            </div>
-                            <div class="form-group">
-                                <!-- Email address input-->
-                                <input class="form-control" id="email" type="email" placeholder="Tu correo *" data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">El correo es obligatorio.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">El correo no es válido.</div>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <!-- Phone number input-->
-                                <input class="form-control" id="phone" type="tel" placeholder="Tu teléfono *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">El teléfono es obligatorio.</div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
-                                <!-- Message input-->
-                                <textarea class="form-control" id="message" placeholder="Tu mensaje *" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">El mensaje es obligatorio.</div>
-                            </div>
+
+                <!-- Contact cards (sin dirección física) -->
+                <div class="row mt-4 contact-cards">
+                    <div class="col-md-6 mb-4 offset-md-0">
+                        <div class="contact-card text-center">
+                            <div class="icon-circle mb-3"> <i class="far fa-envelope"></i> </div>
+                            <h6 class="mb-1 text-uppercase">Correo</h6>
+                            <a class="contact-link" data-type="email" data-enc="moc.kooltuo@1selgaelth" href="#" rel="nofollow noopener" aria-label="Correo electrónico"></a>
+                            <div class="muted small">Respondemos a la brevedad</div>
                         </div>
                     </div>
-                    <!-- Submit success message-->
-                    <!---->
-                    <!-- This is what your users will see when the form-->
-                    <!-- has successfully submitted-->
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center text-white mb-3">
-                            <div class="fw-bolder">¡Formulario enviado con éxito!</div>
-                            Para activar este formulario, regístrate en
-                            <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                    <div class="col-md-6 mb-4">
+                        <div class="contact-card text-center">
+                            <div class="icon-circle mb-3"> <i class="fas fa-phone"></i> </div>
+                            <h6 class="mb-1 text-uppercase">Teléfono</h6>
+                            <a class="contact-link d-block" data-type="phone" data-enc="9933064383945+" href="#" rel="nofollow noopener" aria-label="Teléfono 1"></a>
+                            <a class="contact-link d-block" data-type="phone" data-enc="5814794383945+" href="#" rel="nofollow noopener" aria-label="Teléfono 2"></a>
+                            <div class="muted small">Atención personalizada</div>
                         </div>
                     </div>
-                    <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form-->
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error al enviar el mensaje.</div></div>
-                    <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Enviar mensaje</button></div>
-                </form>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a id="whatsapp-cta" class="btn whatsapp-cta btn-lg" href="#" role="button" aria-label="Escribir por WhatsApp" rel="nofollow noopener">
+                        <i class="fab fa-whatsapp me-2"></i>
+                        Escribinos por WhatsApp
+                    </a>
+                    <div class="text-center small mt-2 muted">Atención personalizada · Respuesta inmediata</div>
+                </div>
             </div>
         </section>
-        <!-- Footer-->
-        <footer class="footer py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">&copy; 2026 HT Legales. Todos los derechos reservados. Catamarca</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <!-- Footer: versión ampliada similar al ejemplo proporcionado -->
+        <footer class="site-footer">
+            <div class="footer-top py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7 mb-4 mb-lg-0">
+                            <a class="footer-brand d-inline-block mb-3" href="#page-top">
+                                <img src="assets/img/logo-ht.svg" alt="HT Legales" style="height:48px; width:auto;" />
+                            </a>
+                            <p class="footer-desc mb-3">Asesoramiento contable, impositivo y laboral de excelencia. Socios locales con foco en soluciones prácticas y prevención de riesgos.</p>
+                            <div class="d-flex align-items-center">
+                                <!-- Replaced social icons with contact shortcuts (obfuscated) -->
+                                <a class="btn btn-dark btn-social me-2 contact-link" data-type="email" data-enc="moc.kooltuo@1selgaelth" href="#" aria-label="Correo"><i class="fas fa-envelope"></i></a>
+                                <a class="btn whatsapp-cta btn-lg me-2" href="#" role="button" aria-label="Escribir por WhatsApp" rel="nofollow noopener">
+                                    <i class="fab fa-whatsapp me-2"></i>
+                                    Escribinos por WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <h5 class="footer-heading text-uppercase mb-3">Navegación</h5>
+                            <ul class="list-unstyled nav-links mb-3">
+                                <li><a href="#page-top">Inicio</a></li>
+                                <li><a href="#services">Servicios</a></li>
+                                <li><a href="#portfolio">Servicios en Mineria</a></li>
+                                <li><a href="#about">El Estudio</a></li>
+                                <li><a href="#team">Profesionales</a></li>
+                                <li><a href="#contact">Contacto</a></li>
+                            </ul>
+                            <div>
+                                <a class="text-decoration-none me-3" href="#privacyModal" data-bs-toggle="modal" aria-controls="privacyModal">Política de privacidad</a>
+                                <a class="text-decoration-none" href="#termsModal" data-bs-toggle="modal" aria-controls="termsModal">Términos de uso</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-4 text-lg-end">
-                        <a class="text-decoration-none me-3" href="#privacyModal" data-bs-toggle="modal" aria-controls="privacyModal">Política de privacidad</a>
-                        <a class="text-decoration-none" href="#termsModal" data-bs-toggle="modal" aria-controls="termsModal">Términos de uso</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom py-3">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 text-md-start small">&copy; 2026 HT Legales. Todos los derechos reservados.</div>
+                        <div class="col-md-6 text-md-end small text-muted">Desarrollado con altos estándares de velocidad, seguridad y eficiencia.</div>
                     </div>
                 </div>
             </div>
@@ -796,6 +800,63 @@
                 s.defer = true;
                 document.body.appendChild(s);
             })();
+        </script>
+        <!-- Small script to decode obfuscated contact data to prevent simple scrapers -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                // Decode elements with data-enc
+                document.querySelectorAll('.contact-link[data-enc]').forEach(function(el){
+                    var enc = el.getAttribute('data-enc') || '';
+                    var decoded = enc.split('').reverse().join('');
+                    var type = el.getAttribute('data-type') || '';
+                        if(type === 'email'){
+                            var subject = 'Nueva consulta';
+                            var body = 'Hola, quisiera agendar una consulta. Mi nombre es [Nombre] y el tema es: [breve descripción].';
+                            var mailto = 'mailto:' + decoded + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+                            el.href = mailto;
+                            el.setAttribute('rel','nofollow noopener noreferrer');
+                            el.setAttribute('target','_blank');
+                            // If the link contains an icon (footer buttons), don't replace inner HTML — set title/aria only.
+                            if (el.querySelector && el.querySelector('i')) {
+                                el.setAttribute('title', decoded);
+                                el.setAttribute('aria-label', decoded);
+                            } else {
+                                el.textContent = decoded;
+                            }
+                    } else if(type === 'phone'){
+                        // show formatted phone but redirect to WhatsApp with preset message
+                        var visible = decoded.replace(/(\+?\d{2})(\d{3})(\d{3})(\d{4})/, '$1 $2 $3 $4');
+                        el.textContent = visible;
+                        var rawTel = decoded.replace(/[^+\d]/g,'');
+                        var waNumber = rawTel.replace(/^\+/, ''); // wa.me expects no plus
+                        var waMessage = encodeURIComponent('Hola, necesito asesoramiento legal sobre un asunto comercial. ¿Tienen disponibilidad para una consulta?');
+                        el.href = 'https://wa.me/' + waNumber + '?text=' + waMessage;
+                        el.setAttribute('rel','nofollow noopener noreferrer');
+                        el.setAttribute('target','_blank');
+                            if (el.querySelector && el.querySelector('i')) {
+                                // keep icon only in footer, expose number via title/aria
+                                el.setAttribute('title', decoded);
+                                el.setAttribute('aria-label', decoded);
+                            } else {
+                                el.textContent = visible;
+                            }
+                    } else {
+                        el.textContent = decoded;
+                    }
+                });
+
+                // WhatsApp CTA: use phone from first contact-link (type=phone) if present
+                var phoneEl = document.querySelector('.contact-link[data-type="phone"][data-enc]');
+                var wa = document.getElementById('whatsapp-cta');
+                if(phoneEl && wa){
+                    var raw = phoneEl.getAttribute('data-enc').split('').reverse().join('');
+                    var tel = raw.replace(/[^+\d]/g,'');
+                    // wa.me expects no plus or spaces
+                    var waNumber = tel.replace(/^\+/, '');
+                    wa.href = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent('Hola, necesito asesoramiento legal sobre un asunto comercial. ¿Tienen disponibilidad para una consulta?');
+                    wa.setAttribute('rel','nofollow noopener noreferrer');
+                }
+            });
         </script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
