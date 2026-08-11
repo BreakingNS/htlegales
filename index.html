@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Agencia - Tema Start Bootstrap</title>
+        <meta name="description" content="HT Legales - Estudio jurídico en San Fernando del Valle de Catamarca (Provincia de Catamarca, CP 4700). Asesoramiento en derecho comercial, contratos, societario, laboral y minería. Atención presencial y por WhatsApp." />
+        <meta name="author" content="HT Legales" />
+        <title>HT Legales — Estudio Jurídico en Catamarca</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -21,9 +21,30 @@
             .masthead-subheading { font-family: 'Inter', sans-serif; font-weight: 400; }
         </style>
         <!-- Core theme CSS (includes Bootstrap) - cargados con versión para cache-busting -->
+                <!-- Local business structured data (JSON-LD) -->
+                <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "LegalService",
+                    "name": "HT Legales",
+                    "description": "Estudio jurídico en San Fernando del Valle de Catamarca especializado en derecho comercial, contratos, societario, laboral y servicios para la industria minera.",
+                    "telephone": "+5493834974185",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "",
+                        "addressLocality": "San Fernando del Valle de Catamarca",
+                        "addressRegion": "Catamarca",
+                        "postalCode": "4700",
+                        "addressCountry": "AR"
+                    },
+                    "areaServed": "San Fernando del Valle de Catamarca, Provincia de Catamarca",
+                    "url": "",
+                    "logo": "assets/img/logo-ht.svg"
+                }
+                </script>
         <script>
             // Cambia SOLO el valor de ASSET_VERSION para forzar recarga de assets en producción
-            var ASSET_VERSION = '9';
+            var ASSET_VERSION = '10';
             (function(){
                 var l = document.createElement('link');
                 l.rel = 'stylesheet';
@@ -229,9 +250,10 @@
                     </h2>
                     
                     <!-- Lema / Bajada Cursiva (Color madera/ámbar oscuro con buen contraste) -->
+                    <!--
                     <h3 class="fst-italic fw-normal fs-5 mb-4" style="color: #BB6C43;">
                         Compromiso, solvencia técnica y visión estratégica al servicio de nuestros clientes.
-                    </h3>
+                    </h3>-->
                     
                     <!-- Párrafo Descriptivo Principal (Texto oscuro, legibilidad perfecta para inversores) -->
                     <div class="row justify-content-center">
@@ -254,14 +276,14 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />
+                            <!--<img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />-->
                             <h4>Hugo Nicolas Trentini</h4>
                             <p class="text-muted">Abogado</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
+                            <!--<img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />-->
                             <h4>Ezequiel Chao</h4>
                             <p class="text-muted">Abogado</p>
                         </div>
@@ -274,7 +296,7 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Contáctanos</h2>
-                    <h3 class="section-subheading text-muted">Consultanos sin compromiso. Nuestro equipo responde a la brevedad.</h3>
+                    <!--<h3 class="section-subheading text-muted">Consultanos sin compromiso. Nuestro equipo responde a la brevedad.</h3>-->
                 </div>
 
                 <!-- Contact cards (sin dirección física) -->
@@ -284,16 +306,17 @@
                             <div class="icon-circle mb-3"> <i class="far fa-envelope"></i> </div>
                             <h6 class="mb-1 text-uppercase">Correo</h6>
                             <a class="contact-link" data-type="email" data-enc="moc.kooltuo@1selgaelth" href="#" rel="nofollow noopener" aria-label="Correo electrónico"></a>
-                            <div class="muted small">Respondemos a la brevedad</div>
+                            <!--<div class="muted small">Respondemos a la brevedad</div>-->
                         </div>
                     </div>
                     <div class="col-md-6 mb-4">
                         <div class="contact-card text-center">
                             <div class="icon-circle mb-3"> <i class="fas fa-phone"></i> </div>
                             <h6 class="mb-1 text-uppercase">Teléfono</h6>
-                            <a class="contact-link d-block" data-type="phone" data-enc="9933064383945+" href="#" rel="nofollow noopener" aria-label="Teléfono 1"></a>
-                            <a class="contact-link d-block" data-type="phone" data-enc="5814794383945+" href="#" rel="nofollow noopener" aria-label="Teléfono 2"></a>
-                            <div class="muted small">Atención personalizada</div>
+                            <!-- Mostrar primero el número que termina en 4185 -->
+                            <a class="contact-link d-block" data-type="phone" data-enc="5814794383945+" href="#" rel="nofollow noopener" aria-label="Teléfono 1"></a>
+                            <a class="contact-link d-block reveal-phone" data-type="phone" data-enc="9933064383945+" data-reveal="click" href="#" rel="nofollow noopener" aria-label="Teléfono 2">Mostrar número</a>
+                            <!--<div class="muted small">Atención personalizada</div>-->
                         </div>
                     </div>
                 </div>
@@ -303,7 +326,7 @@
                         <i class="fab fa-whatsapp me-2"></i>
                         Escribinos por WhatsApp
                     </a>
-                    <div class="text-center small mt-2 muted">Atención personalizada · Respuesta inmediata</div>
+                    <!--<div class="text-center small mt-2 muted">Atención personalizada · Respuesta inmediata</div>-->
                 </div>
             </div>
         </section>
@@ -316,7 +339,7 @@
                             <a class="footer-brand d-inline-block mb-3" href="#page-top">
                                 <img src="assets/img/logo-ht.svg" alt="HT Legales" style="height:48px; width:auto;" />
                             </a>
-                            <p class="footer-desc mb-3">Asesoramiento contable, impositivo y laboral de excelencia. Socios locales con foco en soluciones prácticas y prevención de riesgos.</p>
+                            <p class="footer-desc mb-3">Asesoramiento contable.</p>
                             <div class="d-flex align-items-center">
                                 <!-- Replaced social icons with contact shortcuts (obfuscated) -->
                                 <a class="btn btn-dark btn-social me-2 contact-link" data-type="email" data-enc="moc.kooltuo@1selgaelth" href="#" aria-label="Correo"><i class="fas fa-envelope"></i></a>
@@ -801,61 +824,77 @@
                 document.body.appendChild(s);
             })();
         </script>
-        <!-- Small script to decode obfuscated contact data to prevent simple scrapers -->
+        <!-- Small script to decode obfuscated contact data to prevent simple scrapers
+             and support click-to-reveal for secondary numbers -->
         <script>
             document.addEventListener('DOMContentLoaded', function(){
-                // Decode elements with data-enc
+                function decodeEnc(enc){ return (enc||'').split('').reverse().join(''); }
+
                 document.querySelectorAll('.contact-link[data-enc]').forEach(function(el){
                     var enc = el.getAttribute('data-enc') || '';
-                    var decoded = enc.split('').reverse().join('');
                     var type = el.getAttribute('data-type') || '';
-                        if(type === 'email'){
-                            var subject = 'Nueva consulta';
-                            var body = 'Hola, quisiera agendar una consulta. Mi nombre es [Nombre] y el tema es: [breve descripción].';
-                            var mailto = 'mailto:' + decoded + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-                            el.href = mailto;
-                            el.setAttribute('rel','nofollow noopener noreferrer');
-                            el.setAttribute('target','_blank');
-                            // If the link contains an icon (footer buttons), don't replace inner HTML — set title/aria only.
-                            if (el.querySelector && el.querySelector('i')) {
-                                el.setAttribute('title', decoded);
-                                el.setAttribute('aria-label', decoded);
-                            } else {
-                                el.textContent = decoded;
-                            }
-                    } else if(type === 'phone'){
-                        // show formatted phone but redirect to WhatsApp with preset message
-                        var visible = decoded.replace(/(\+?\d{2})(\d{3})(\d{3})(\d{4})/, '$1 $2 $3 $4');
-                        el.textContent = visible;
-                        var rawTel = decoded.replace(/[^+\d]/g,'');
-                        var waNumber = rawTel.replace(/^\+/, ''); // wa.me expects no plus
-                        var waMessage = encodeURIComponent('Hola, necesito asesoramiento legal sobre un asunto comercial. ¿Tienen disponibilidad para una consulta?');
-                        el.href = 'https://wa.me/' + waNumber + '?text=' + waMessage;
+                    var reveal = el.getAttribute('data-reveal') || '';
+
+                    if(type === 'email'){
+                        var decoded = decodeEnc(enc);
+                        var subject = 'Nueva consulta';
+                        var body = 'Hola, quisiera agendar una consulta. Mi nombre es [Nombre] y el tema es: [breve descripción].';
+                        var mailto = 'mailto:' + decoded + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+                        el.href = mailto;
                         el.setAttribute('rel','nofollow noopener noreferrer');
                         el.setAttribute('target','_blank');
+                        if (el.querySelector && el.querySelector('i')) {
+                            el.setAttribute('title', decoded);
+                            el.setAttribute('aria-label', decoded);
+                        } else {
+                            el.textContent = decoded;
+                        }
+
+                    } else if(type === 'phone'){
+                        if(reveal === 'click'){
+                            // keep hidden until user clicks; provide a placeholder
+                            if(!el.textContent || el.textContent.trim() === '') el.textContent = el.getAttribute('data-placeholder') || 'Mostrar número';
+                            el.setAttribute('role','button');
+                            el.setAttribute('aria-pressed','false');
+                            el.addEventListener('click', function(ev){
+                                ev.preventDefault();
+                                var decoded = decodeEnc(enc);
+                                var visible = decoded.replace(/(\+?\d{2})(\d{3})(\d{3})(\d{4})/, '$1 $2 $3 $4');
+                                el.textContent = visible;
+                                var rawTel = decoded.replace(/[^+\d]/g,'');
+                                var waNumber = rawTel.replace(/^\+/, '');
+                                el.href = 'https://wa.me/' + waNumber;
+                                el.setAttribute('rel','nofollow noopener noreferrer');
+                                el.setAttribute('target','_blank');
+                                el.removeAttribute('data-reveal');
+                                el.classList.remove('reveal-phone');
+                            }, { once: true });
+                        } else {
+                            var decoded = decodeEnc(enc);
+                            var visible = decoded.replace(/(\+?\d{2})(\d{3})(\d{3})(\d{4})/, '$1 $2 $3 $4');
+                            el.textContent = visible;
+                            var rawTel = decoded.replace(/[^+\d]/g,'');
+                            var waNumber = rawTel.replace(/^\+/, '');
+                            el.href = 'https://wa.me/' + waNumber;
+                            el.setAttribute('rel','nofollow noopener noreferrer');
+                            el.setAttribute('target','_blank');
                             if (el.querySelector && el.querySelector('i')) {
-                                // keep icon only in footer, expose number via title/aria
                                 el.setAttribute('title', decoded);
                                 el.setAttribute('aria-label', decoded);
-                            } else {
-                                el.textContent = visible;
                             }
+                        }
                     } else {
-                        el.textContent = decoded;
+                        el.textContent = decodeEnc(enc);
                     }
                 });
 
-                // WhatsApp CTA: use phone from first contact-link (type=phone) if present
-                var phoneEl = document.querySelector('.contact-link[data-type="phone"][data-enc]');
+                // WhatsApp CTA: use explicit primary number for reliability
                 var wa = document.getElementById('whatsapp-cta');
-                if(phoneEl && wa){
-                    var raw = phoneEl.getAttribute('data-enc').split('').reverse().join('');
-                    var tel = raw.replace(/[^+\d]/g,'');
-                    // wa.me expects no plus or spaces
-                    var waNumber = tel.replace(/^\+/, '');
-                    wa.href = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent('Hola, necesito asesoramiento legal sobre un asunto comercial. ¿Tienen disponibilidad para una consulta?');
+                if(wa){
+                    var waNumber = '5493834974185';
+                    wa.href = 'https://wa.me/' + waNumber;
                     wa.setAttribute('rel','nofollow noopener noreferrer');
-                    // Also assign footer-only whatsapp icon(s) the same link
+                    wa.setAttribute('target','_blank');
                     document.querySelectorAll('.footer-whatsapp').forEach(function(f){
                         f.href = wa.href;
                         f.setAttribute('rel','nofollow noopener noreferrer');
