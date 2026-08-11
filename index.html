@@ -44,7 +44,7 @@
                 </script>
         <script>
             // Cambia SOLO el valor de ASSET_VERSION para forzar recarga de assets en producción
-            var ASSET_VERSION = '14';
+            var ASSET_VERSION = '15';
             (function(){
                 var l = document.createElement('link');
                 l.rel = 'stylesheet';
@@ -828,6 +828,7 @@
         <script>
             document.addEventListener('DOMContentLoaded', function(){
                 function decodeEnc(enc){ return (enc||'').split('').reverse().join(''); }
+                var defaultContactMessage = 'Hola, me gustaría solicitar información para una consulta.';
 
                 document.querySelectorAll('.contact-link[data-enc]').forEach(function(el){
                     var enc = el.getAttribute('data-enc') || '';
@@ -862,7 +863,7 @@
                                 el.textContent = visible;
                                 var rawTel = decoded.replace(/[^+\d]/g,'');
                                 var waNumber = rawTel.replace(/^\+/, '');
-                                el.href = 'https://wa.me/' + waNumber;
+                                el.href = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(defaultContactMessage);
                                 el.setAttribute('rel','nofollow noopener noreferrer');
                                 el.setAttribute('target','_blank');
                                 el.removeAttribute('data-reveal');
@@ -874,7 +875,7 @@
                             el.textContent = visible;
                             var rawTel = decoded.replace(/[^+\d]/g,'');
                             var waNumber = rawTel.replace(/^\+/, '');
-                            el.href = 'https://wa.me/' + waNumber;
+                            el.href = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(defaultContactMessage);
                             el.setAttribute('rel','nofollow noopener noreferrer');
                             el.setAttribute('target','_blank');
                             if (el.querySelector && el.querySelector('i')) {
@@ -891,7 +892,7 @@
                 var wa = document.getElementById('whatsapp-cta');
                 if(wa){
                     var waNumber = '5493834974185';
-                    wa.href = 'https://wa.me/' + waNumber;
+                    wa.href = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(defaultContactMessage);
                     wa.setAttribute('rel','nofollow noopener noreferrer');
                     wa.setAttribute('target','_blank');
                     document.querySelectorAll('.footer-whatsapp').forEach(function(f){
