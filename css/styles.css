@@ -799,6 +799,65 @@ progress {
   }
 }
 
+/* Mejorar presencia de las secciones 'Nuestra Firma' y 'Cuerpo Profesional' */
+#about .text-center, #team .text-center {
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(250,249,248,0.98));
+  border-radius: 14px;
+  padding: 2rem 1.25rem;
+  margin-bottom: 1.75rem;
+  box-shadow: 0 12px 30px rgba(12,18,28,0.06);
+  border-left: 6px solid rgba(var(--bs-primary-rgb), 0.12);
+}
+
+#about .section-heading, #team .section-heading {
+  color: var(--app-dark);
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+/* barra acento sutil bajo el título */
+#about .section-heading::after, #team .section-heading::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 6px;
+  margin: .75rem auto 0.4rem auto;
+  border-radius: 4px;
+  background: linear-gradient(90deg, rgba(var(--bs-primary-rgb),0.98), rgba(var(--bs-secondary-rgb),0.85));
+  box-shadow: 0 4px 14px rgba(187,108,67,0.12);
+}
+
+/* Subtítulo: un poco más definido */
+#about .section-subheading, #team .section-subheading {
+  color: rgba(74,65,60,0.88);
+  font-style: italic;
+  max-width: 66ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tarjetas discretas para miembros del equipo */
+.team-member {
+  background: #ffffff;
+  padding: 1.25rem 1.35rem;
+  border-radius: 12px;
+  border: 1px solid rgba(74,65,60,0.05);
+  box-shadow: 0 10px 26px rgba(12,18,28,0.06);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  text-align: center;
+}
+.team-member:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 44px rgba(12,18,28,0.10);
+}
+.team-member h4 { color: var(--app-dark); margin-bottom: .25rem; }
+.team-member p { color: rgba(74,65,60,0.7); margin-bottom: 0; }
+
+@media (max-width: 767px) {
+  #about .text-center, #team .text-center { padding: 1.25rem; }
+  .team-member { margin-bottom: .75rem; }
+}
+
 .display-2 {
   font-size: calc(1.575rem + 3.9vw);
   font-weight: 300;
